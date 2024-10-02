@@ -1,0 +1,62 @@
+[
+  {
+    "index": 1,
+    "title": "Verificação de Par ou Ímpar",
+    "description": "Escreva uma função que receba um número inteiro como parâmetro e use a estrutura if/else para verificar se o número é par ou ímpar.",
+    "colorHex": "#34C759"
+  },
+  {
+    "index": 2,
+    "title": "Classificação de Idade",
+    "description": "Crie uma função que classifique uma pessoa em diferentes categorias de idade, como:\n\n\"Criança\" se a idade for menor que 12.\n\"Adolescente\" se a idade estiver entre 12 e 18.\n\"Adulto\" se for maior que 18.",
+    "colorHex": "#A52A2A"
+  },
+  {
+    "index": 3,
+    "title": "Calculadora Simples",
+    "description": "Implemente uma função de calculadora que receba dois números e uma operação (soma, subtração, multiplicação, divisão) e use switch/case para realizar a operação correta.",
+    "colorHex": "#FFCC00"
+  },
+  {
+    "index": 4,
+    "title": "Identificar o Dia da Semana",
+    "description": "Faça uma função que, dado um número de 1 a 7, imprima o dia correspondente da semana (por exemplo, 1 para domingo, 2 para segunda, etc.). Use switch/case.",
+    "colorHex": "#FF3B30"
+  },
+  {
+    "index": 5,
+    "title": "Soma de Números Pares",
+    "description": "Escreva um programa que utilize um for para somar todos os números pares de 1 a N.",
+    "colorHex": "#8E8E93"
+  },
+  {
+    "index": 6,
+    "title": "Imprimir uma Tabela de Multiplicação",
+    "description": "Implemente uma função que use um for para imprimir a tabela de multiplicação do número fornecido, de 1 a 10.",
+    "colorHex": "#5AC8FA"
+  },
+  {
+    "index": 7,
+    "title": "Repetir até Adivinhar",
+    "description": "Crie um jogo simples que gere um número aleatório de 1 a 10. O usuário deve adivinhar o número e o programa deve continuar pedindo palpites até que o usuário acerte. Utilize um repeat/while.",
+    "colorHex": "#007AFF"
+  },
+  {
+    "index": 8,
+    "title": "Verificação de Senha",
+    "description": "Faça um programa que peça uma senha ao usuário e continue pedindo até que a senha digitada seja \"123456\". Use while para a repetição.",
+    "colorHex": "#FF2D55"
+  },
+  {
+    "index": 9,
+    "title": "Contagem Regressiva",
+    "description": "Escreva um código que faça uma contagem regressiva de 10 a 1 utilizando a estrutura for. Ao final, imprima \"Feliz Ano Novo!\".",
+    "colorHex": "#FF9500"
+  },
+  {
+    "index": 10,
+    "title": "Fibonacci",
+    "description": "Implemente um programa que calcule a sequência de Fibonacci até um valor limite fornecido pelo usuário. Use while para gerar os termos da sequência.",
+    "colorHex": "#00C7BE"
+  }
+]
