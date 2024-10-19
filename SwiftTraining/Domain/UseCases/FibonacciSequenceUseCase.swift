@@ -1,4 +1,8 @@
-struct FibonacciSequenceUseCase {
+protocol FibonacciSequenceUseCaseProtocol {
+    func generateSequence(upTo limit: Int) -> [Int]
+}
+
+struct FibonacciSequenceUseCase: FibonacciSequenceUseCaseProtocol {
     func generateSequence(upTo limit: Int) -> [Int] {
         var sequence: [Int] = []
         var a = 0

@@ -1,4 +1,8 @@
-struct EvenNumbersSumUseCase {
+protocol EvenNumbersSumUseCaseProtocol {
+    func execute(upTo n: Int) -> Int
+}
+
+struct EvenNumbersSumUseCase: EvenNumbersSumUseCaseProtocol {
     func execute(upTo n: Int) -> Int {
         guard n >= 2 else { return 0 }
         var sum = 0

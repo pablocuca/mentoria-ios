@@ -1,4 +1,11 @@
-class PasswordVerificationUseCase {
+protocol PasswordVerificationUseCaseProtocol {
+    func verify(password: String) -> Bool
+    func reset()
+    func hasAuthenticated() -> Bool
+    func getAttempts() -> Int
+}
+
+class PasswordVerificationUseCase: PasswordVerificationUseCaseProtocol {
     private let correctPassword = "123456"
     private var attempts = 0
     private var isAuthenticated = false

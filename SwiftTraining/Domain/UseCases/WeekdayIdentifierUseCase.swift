@@ -1,4 +1,8 @@
-struct WeekdayIdentifierUseCase {
+protocol WeekdayIdentifierUseCaseProtocol {
+    func execute(number: Int) -> String
+}
+
+struct WeekdayIdentifierUseCase: WeekdayIdentifierUseCaseProtocol {
     func execute(number: Int) -> String {
         switch number {
         case 1:

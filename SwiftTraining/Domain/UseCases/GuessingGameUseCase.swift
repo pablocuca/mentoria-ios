@@ -1,4 +1,9 @@
-class GuessingGameUseCase {
+protocol GuessingGameUseCaseProtocol {
+    func makeGuess(_ guess: Int) -> String
+    func resetGame()
+}
+
+class GuessingGameUseCase: GuessingGameUseCaseProtocol {
     private var targetNumber: Int
     private var attempts: Int
 

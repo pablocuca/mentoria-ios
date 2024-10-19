@@ -1,9 +1,13 @@
+protocol SimpleCalculatorUseCaseProtocol {
+    func execute(operation: String, firstNumber: Double, secondNumber: Double) throws -> Double
+}
+
 enum CalculatorError: Error {
     case divisionByZero
     case invalidOperation
 }
 
-struct SimpleCalculatorUseCase {
+struct SimpleCalculatorUseCase: SimpleCalculatorUseCaseProtocol {
     func execute(operation: String, firstNumber: Double, secondNumber: Double) throws -> Double {
         switch operation {
         case "+":

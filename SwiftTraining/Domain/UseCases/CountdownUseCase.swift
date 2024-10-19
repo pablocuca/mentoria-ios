@@ -1,6 +1,11 @@
 import Foundation
 
-class CountdownUseCase {
+protocol CountdownUseCaseProtocol {
+    func startCountdown(completion: @escaping (Int, Bool) -> Void)  -> Void
+    func stopCountdown() -> Void
+}
+
+class CountdownUseCase: CountdownUseCaseProtocol {
     private var countdownValue: Int
     private let totalDuration: Int
     private var timer: Timer?

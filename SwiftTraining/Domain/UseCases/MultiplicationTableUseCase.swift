@@ -1,4 +1,8 @@
-struct MultiplicationTableUseCase {
+protocol MultiplicationTableUseCaseProtocol {
+    func execute(for number: Int) -> [String]
+}
+
+struct MultiplicationTableUseCase: MultiplicationTableUseCaseProtocol {
     func execute(for number: Int) -> [String] {
         var table: [String] = []
         for i in 1...10 {
