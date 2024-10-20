@@ -1,6 +1,17 @@
 import UIKit
 
 class GuessingGameViewController: ExerciseViewController {
+    private var guessingGameUseCase: GuessingGameUseCaseProtocol
+    
+    init(exercise: Exercise, guessingGameUseCase: GuessingGameUseCaseProtocol) {
+        self.guessingGameUseCase = guessingGameUseCase
+        super.init(exercise: exercise)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
 
     // MARK: - UI Elements
 
@@ -42,10 +53,6 @@ class GuessingGameViewController: ExerciseViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
-    // MARK: - Properties
-
-    private var guessingGameUseCase = GuessingGameUseCase()
 
     // MARK: - Overrides
 

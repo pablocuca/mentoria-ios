@@ -1,6 +1,16 @@
 import UIKit
 
 class SimpleCalculatorViewController: ExerciseViewController {
+    private let simpleCalculatorUseCase: SimpleCalculatorUseCaseProtocol
+    
+    init(exercise: Exercise, simpleCalculatorUseCase: SimpleCalculatorUseCaseProtocol) {
+        self.simpleCalculatorUseCase = simpleCalculatorUseCase
+        super.init(exercise: exercise)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - UI Elements
 
@@ -84,9 +94,7 @@ class SimpleCalculatorViewController: ExerciseViewController {
     }
 
     // MARK: - Actions
-
-    private let simpleCalculatorUseCase = SimpleCalculatorUseCase()
-    
+ 
     @objc private func calculateResult() {
         // Fechar o teclado
         firstNumberTextField.resignFirstResponder()

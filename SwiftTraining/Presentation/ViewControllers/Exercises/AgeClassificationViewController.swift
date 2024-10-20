@@ -1,6 +1,16 @@
 import UIKit
 
 class AgeClassificationViewController: ExerciseViewController {
+    private let ageClassificationUseCase: AgeClassificationUseCaseProtocol
+    
+    init(exercise: Exercise, ageClassificationUseCase: AgeClassificationUseCaseProtocol) {
+        self.ageClassificationUseCase = ageClassificationUseCase
+        super.init(exercise: exercise)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - UI Elements
 
@@ -67,8 +77,6 @@ class AgeClassificationViewController: ExerciseViewController {
     }
 
     // MARK: - Actions
-
-    private let ageClassificationUseCase = AgeClassificationUseCase()
     
     @objc private func classifyAge() {
         // Fechar o teclado

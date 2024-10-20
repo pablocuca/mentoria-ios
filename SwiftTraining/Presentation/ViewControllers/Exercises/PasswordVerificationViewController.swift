@@ -1,6 +1,16 @@
 import UIKit
 
 class PasswordVerificationViewController: ExerciseViewController {
+    private var passwordVerificationUseCase: PasswordVerificationUseCaseProtocol
+    
+    init(exercise: Exercise, passwordVerificationUseCase: PasswordVerificationUseCaseProtocol) {
+        self.passwordVerificationUseCase = passwordVerificationUseCase
+        super.init(exercise: exercise)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - UI Elements
 
@@ -42,10 +52,6 @@ class PasswordVerificationViewController: ExerciseViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
-    // MARK: - Properties
-
-    private var passwordVerificationUseCase = PasswordVerificationUseCase()
 
     // MARK: - Overrides
 

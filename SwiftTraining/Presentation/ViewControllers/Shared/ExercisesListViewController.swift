@@ -75,16 +75,16 @@ class ExercisesListViewController: UIViewController, UITableViewDataSource, UITa
 
     // Crie um dicionário que mapeia o index para o factory
     let exerciseFactories: [Int: ExerciseFactory] = [
-        1: { OddEvenCheckerViewController(exercise: $0) },
-        2: { AgeClassificationViewController(exercise: $0) },
-        3: { SimpleCalculatorViewController(exercise: $0) },
-        4: { WeekdayIdentifierViewController(exercise: $0) },
-        5: { EvenNumbersSumViewController(exercise: $0) },
-        6: { MultiplicationTableViewController(exercise: $0) },
-        7: { GuessingGameViewController(exercise: $0) },
-        8: { PasswordVerificationViewController(exercise: $0) },
-        9: { CountdownViewController(exercise: $0) },
-        10: { FibonacciSequenceViewController(exercise: $0) }
+        1: { OddEvenCheckerViewController(exercise: $0, oddEvenCheckerUseCase: OddEvenCheckerUseCase()) },
+        2: { AgeClassificationViewController(exercise: $0, ageClassificationUseCase: AgeClassificationUseCase()) },
+        3: { SimpleCalculatorViewController(exercise: $0, simpleCalculatorUseCase: SimpleCalculatorUseCase()) },
+        4: { WeekdayIdentifierViewController(exercise: $0, weekdayIdentifierUseCase: WeekdayIdentifierUseCase()) },
+        5: { EvenNumbersSumViewController(exercise: $0, evenNumbersSumUseCase: EvenNumbersSumUseCase()) },
+        6: { MultiplicationTableViewController(exercise: $0, multiplicationTableUseCase: MultiplicationTableUseCase()) },
+        7: { GuessingGameViewController(exercise: $0, guessingGameUseCase: GuessingGameUseCase()) },
+        8: { PasswordVerificationViewController(exercise: $0, passwordVerificationUseCase: PasswordVerificationUseCase()) },
+        9: { CountdownViewController(exercise: $0, countdownUseCase: CountdownUseCase()) },
+        10: { FibonacciSequenceViewController(exercise: $0, fibonacciSequenceUseCase: FibonacciSequenceUseCase()) }
         // Adicione outros exercícios aqui
     ]
 

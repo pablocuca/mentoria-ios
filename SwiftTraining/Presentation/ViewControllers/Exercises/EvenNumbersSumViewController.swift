@@ -1,6 +1,16 @@
 import UIKit
 
 class EvenNumbersSumViewController: ExerciseViewController {
+    private let evenNumbersSumUseCase: EvenNumbersSumUseCaseProtocol
+    
+    init(exercise: Exercise, evenNumbersSumUseCase: EvenNumbersSumUseCaseProtocol) {
+        self.evenNumbersSumUseCase = evenNumbersSumUseCase
+        super.init(exercise: exercise)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - UI Elements
 
@@ -35,10 +45,6 @@ class EvenNumbersSumViewController: ExerciseViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
-    // MARK: - Properties
-
-    private let evenNumbersSumUseCase = EvenNumbersSumUseCase()
 
     // MARK: - Overrides
 

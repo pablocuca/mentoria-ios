@@ -1,6 +1,16 @@
 import UIKit
 
 class OddEvenCheckerViewController: ExerciseViewController {
+    private let oddEvenCheckerUseCase: OddEvenCheckerUseCaseProtocol
+    
+    init(exercise: Exercise, oddEvenCheckerUseCase: OddEvenCheckerUseCaseProtocol) {
+        self.oddEvenCheckerUseCase = oddEvenCheckerUseCase
+        super.init(exercise: exercise)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - UI Elements
 
@@ -67,8 +77,6 @@ class OddEvenCheckerViewController: ExerciseViewController {
     }
 
     // MARK: - Actions
-
-    private let oddEvenCheckerUseCase = OddEvenCheckerUseCase()
     
     @objc private func checkNumber() {
         // Fechar o teclado

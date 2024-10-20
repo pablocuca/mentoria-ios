@@ -1,6 +1,16 @@
 import UIKit
 
 class WeekdayIdentifierViewController: ExerciseViewController {
+    private let weekdayIdentifierUseCase: WeekdayIdentifierUseCaseProtocol
+    
+    init(exercise: Exercise, weekdayIdentifierUseCase: WeekdayIdentifierUseCaseProtocol) {
+        self.weekdayIdentifierUseCase = weekdayIdentifierUseCase
+        super.init(exercise: exercise)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - UI Elements
 
@@ -68,8 +78,6 @@ class WeekdayIdentifierViewController: ExerciseViewController {
     }
 
     // MARK: - Actions
-
-    private let weekdayIdentifierUseCase = WeekdayIdentifierUseCase()
     
     @objc private func identifyDay() {
         // Fechar o teclado

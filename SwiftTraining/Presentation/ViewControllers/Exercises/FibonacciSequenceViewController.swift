@@ -1,6 +1,16 @@
 import UIKit
 
 class FibonacciSequenceViewController: ExerciseViewController {
+    private let fibonacciSequenceUseCase: FibonacciSequenceUseCaseProtocol
+    
+    init(exercise: Exercise, fibonacciSequenceUseCase: FibonacciSequenceUseCaseProtocol) {
+        self.fibonacciSequenceUseCase = fibonacciSequenceUseCase
+        super.init(exercise: exercise)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - UI Elements
 
@@ -35,10 +45,6 @@ class FibonacciSequenceViewController: ExerciseViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
-    // MARK: - Properties
-
-    private let fibonacciSequenceUseCase = FibonacciSequenceUseCase()
 
     // MARK: - Overrides
 

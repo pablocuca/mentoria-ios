@@ -1,6 +1,17 @@
 import UIKit
 
 class CountdownViewController: ExerciseViewController {
+    private var countdownUseCase: CountdownUseCaseProtocol
+    private var isCounting = false
+    
+    init(exercise: Exercise, countdownUseCase: CountdownUseCaseProtocol) {
+        self.countdownUseCase = countdownUseCase
+        super.init(exercise: exercise)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - UI Elements
 
@@ -19,11 +30,6 @@ class CountdownViewController: ExerciseViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
-    // MARK: - Properties
-
-    private var countdownUseCase = CountdownUseCase()
-    private var isCounting = false
 
     // MARK: - Overrides
 

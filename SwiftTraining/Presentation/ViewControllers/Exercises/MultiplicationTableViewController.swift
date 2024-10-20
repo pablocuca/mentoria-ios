@@ -1,6 +1,16 @@
 import UIKit
 
 class MultiplicationTableViewController: ExerciseViewController {
+    private let multiplicationTableUseCase: MultiplicationTableUseCaseProtocol
+    
+    init(exercise: Exercise, multiplicationTableUseCase: MultiplicationTableUseCaseProtocol) {
+        self.multiplicationTableUseCase = multiplicationTableUseCase
+        super.init(exercise: exercise)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - UI Elements
 
@@ -36,9 +46,6 @@ class MultiplicationTableViewController: ExerciseViewController {
         return label
     }()
 
-    // MARK: - Properties
-
-    private let multiplicationTableUseCase = MultiplicationTableUseCase()
 
     // MARK: - Overrides
 
