@@ -1,6 +1,7 @@
 protocol GuessingGameUseCaseProtocol {
     func makeGuess(_ guess: Int) -> String
     func resetGame()
+    func getCorrectNumberForTesting() -> Int
 }
 
 class GuessingGameUseCase: GuessingGameUseCaseProtocol {
@@ -27,5 +28,10 @@ class GuessingGameUseCase: GuessingGameUseCaseProtocol {
     func resetGame() {
         self.targetNumber = Int.random(in: 1...10)
         self.attempts = 0
+    }
+    
+    // Método usado apenas para fins de teste
+    func getCorrectNumberForTesting() -> Int {
+        return targetNumber
     }
 }
